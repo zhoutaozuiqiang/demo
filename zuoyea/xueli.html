@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{ 
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			text-decoration: none;
+		}
+		ul{
+			list-style: none;
+		}
+		.xueli{
+			margin-left: 100px;
+			margin-top: 33px;
+			margin-bottom: 29px;
+			width:170px;
+			height:39px;
+			font-size:40px;
+			font-family:Microsoft YaHei;
+			font-weight:bold;
+			color:rgba(0,164,255,1);
+			float: left;
+		}
+		.nav{
+			margin:42px 0 0px 71px;
+			height:18px;
+			font-size:18px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			float: left;
+		}
+		.nav>a{
+			display: block;
+			margin-right: 30px;
+			padding: 10px 8px;
+			color:rgba(5,5,5,1);
+			float: left;
+		}
+		.nav>a:hover{
+			border-bottom: 2px solid rgba(0,164,255,1);
+		}
+		.shurukuang{
+			width:411px;
+            height:40px;
+            margin-top: 31px;
+            float:left;
+            position: absolute;
+            left: 780px;
+		}
+		input{
+			display: block;
+			height:40px;
+			width: 411px;
+			float: left;
+			border: 1px solid rgba(0,164,255,1);
+		}
+		.search{
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(191,191,191,1);
+			line-height:31px;
+		}
+		.placeholder{
+			display: inline-block;
+			height:42px;
+			width: 52px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(191,191,191,1);
+			line-height:31px;
+			position: absolute;
+			left: 360px;
+		}
+		.fuhao{
+			width: 51px;
+			height: 41px;
+			background:rgba(0,164,255,1);
+			float:left;
+			position: absolute;
+			left: 360px;
+			top:0;
+		}
+		#img{
+			height: 19px;
+			width: 19px;
+			margin: 11px 15px 11px 17px;
+		}
+		.gerenzhongxin{
+			margin-top: 44px;
+			margin-left: 31px;
+			margin-right: 250px;
+			width:60px;
+			height:12px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(102,102,102,1);
+			float: right;
+			position: absolute;
+			left: 1200px;
+		}
+		.shurukuang ul{
+			display: none;
+		}
+		.shurukuang:active ul{
+			display: block;
+			width:270px;
+			height:166px;
+			background:rgba(255,255,255,1);
+			box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+			position: absolute;
+			left: -59px;
+			top: 42px;
+		}
+		.jichu{
+			width: 1519px;
+			height:420px;
+			background:rgba(28,3,108,1);
+			float: left;
+			background-image: url(banner2.png);
+			background-position: 220px 0;
+			background-repeat: no-repeat; 
+		}
+		.lie{
+			margin-left: 100px;
+			width:190px;
+			height:420px;
+			background:rgba(0,0,0,0.3);
+			float: left;
+		}
+		.lie ul li{
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			line-height:44px;
+			padding-bottom: 1px;
+		}
+		.nav1{
+			width:1200px;
+			height:60px;
+			margin-left: 100px;
+			background:rgba(255,255,255,1);
+			box-shadow:0px 2px 3px 0px rgba(118,118,118,0.2);
+			float: left;
+		}
+		.wenzi{
+			display: inline-block;
+			margin-left: 34px;
+			height:18px;
+			width: 98px;
+			margin-top: 21px;
+			border-right:1px solid rgba(191,191,191,1);
+			font-size:16px;
+			font-family:Microsoft YaHei;
+			font-weight:bold;
+			color:black;
+			float: left;
+		}
+		.wenzi:hover{
+			color:rgba(0,164,255,1);
+		}
+		.img{
+			width:225px;
+			height:270px;
+			background:rgba(255,255,255,1);
+			box-shadow:0px 2px 5px 0px rgba(118,118,118,0.5);
+			float: left;
+			margin-left: 15px;
+			margin-bottom: 15px;
+		}
+		.img p{
+			display: block;
+			padding-top:24px;
+			padding-left: 23px;
+			width:185px;
+			height:34px;
+			font-size:14px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(5,5,5,1);
+			line-height:20px;
+		}
+		.span{
+			margin-top: 18px;
+			display: block;
+			padding-left: 23px;
+			width:119px;
+			height:13px;
+			font-size:12px;
+			font-family:Microsoft YaHei;
+			font-weight:400;
+			color:rgba(255,124,45,1);
+		}
+		.laoshi{
+			width:220px;
+			height:122px;
+			background:rgba(0,0,0,1);
+			opacity:0.5;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<div style="background-position: center center;">
+			<div class="xueli clear" id="sit">雪梨在线</div>
+			<div class="nav">
+				<a href="#" class="col">首页</a>
+				<a href="#" class="col">课程</a>
+				<a href="#" class="col">职业规划</a>
+			</div>
+			<div class="gerenzhongxin clear">个人中心</div>
+			<div class="shurukuang clear">
+				<form>
+					<input type="text" placeholder="请输入关键词" class="search" id="sea">
+					<input type="button" class="placeholder" style="border: none;">
+				</form>
+				<div class="fuhao clear">
+					<img src="fa-search.png" id="img" />
+				</div>
+			</div>
+			<div id="box" style="height: 20px;width: 400px;position: absolute;left: 780px;top: 70px"></div>
+		</div>
+		<div   class="jichu">
+
+			<div class="lie">
+				<ul>
+					<li><a href="#" style="color:rgba(0,180,255,1); padding-top: 5px;padding-left: 20px;">前端开发</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">后端开发</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">移动开发</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">人工智能</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">商业预测</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">云计算&大数据</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">运维&从测试</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">UI设计</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top: 15px;"></li>
+					<li><a href="#" style="color:white;padding-left: 20px;">产品</a><img src="形状 3 拷贝.png" style="padding-right:23px;float:right;padding-top:15px;"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav1">
+			<a href="#" class="wenzi">精品推荐</a>
+			<a href="#" class="wenzi">JQuery</a>
+			<a href="#" class="wenzi">Spark</a>
+			<a href="#" class="wenzi">MySQL</a>
+			<a href="#" class="wenzi">JavaWeb</a>
+			<a href="#" class="wenzi">MySQL</a>
+			<a href="#" class="wenzi">JavaWeb</a>
+			<a href="#" style="height:18px;font-size:16px;font-family:Microsoft YaHei;font-weight:bold;color:rgba(0,164,255,1);margin-right: 61px;margin-top:21px;float: right;" >修改兴趣</a>
+		</div>
+		<div style="float: left;width: 1200px;height: 77px;margin-left: 100px;">
+			<p style="width:80px;height:19px;font-size:20px;font-family:Microsoft YaHei;font-weight:400;color:rgba(73,73,73,1);display: block;float: left;margin-top: 37px;">精品推荐</p>
+			<p style="width:48px;height:13px;font-size:12px;font-family:Microsoft YaHei;font-weight:400;color:rgba(165,165,165,1);display: block;margin-right:31px;float: right;margin-top: 31px;">查看全部</p>
+		</div>
+		<div style="float: left;width: 1200px;margin-left: 80px;">
+			<div class="img"><img src="图层 133.png" style=" width: 225px;height: 115px;  "><p>Think PHP 5.0 博客系统实战项目演练</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 135.png" style=" width: 225px;height: 115px;margin-left: 0px;"><p>Android 网络图片加载框架详解</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 136.png" style="width: 225px;height: 115px;"><p>Angular 2 最佳框架+主流技术+项目实战</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 137.png" style="width: 225px;height: 115px;  "><p>Android Hybrid APP开发实战H5+原生</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 137.png" style=" width: 225px;height: 115px;  "><p>Android Hybrid APP开发实战H5+原生</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习<p></div>
+			<div class="img"><img src="图层 133.png" style=" width: 225px;height: 115px;  "><p>Think PHP 5.0 博客系统实战项目演练</p><p><span style="color: #FF7C2D">高级</span> · 1125人参与学习<p></div>
+			<div class="img"><img src="图层 135.png" style=" width: 225px;height: 115px;  "><p>Android 网络图片加载框架详解</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 136.png" style=" width: 225px;height: 115px;  "><p>Angular 2 最佳框架+主流技术+项目实战</p><p class="span"><span style="color: #FF7C2D">高级 </span>· 1125人在学习<p></div>
+			<div class="img"><img src="图层 137.png" style=" width: 225px;height: 115px; "><p>Android Hybrid APP开发实战H5+原生</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 137.png" style=" width: 225px;height: 115px; "><p>Android Hybrid APP开发实战H5+原生</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+		</div>
+		<div style="float: left;width: 1200px;height: 77px;">
+			<p style="width:160px;height:19px;font-size:20px;font-family:Microsoft YaHei;font-weight:400;color:rgba(73,73,73,1);display:block; color:black;margin-left: 100px;float: left;margin-top: 37px;">前端开发师</p>
+			<a href="#" style="display:block;width:50px;height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:#00A4FF;float: left;margin-left:291px;margin-top: 41px;">热门</a>
+			<a href="#" style="display:block;width:50px;height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:black;float: left;margin-left:30px;margin-top: 41px; ">初级</a>
+			<a href="#" style="display:block;width:50px;height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:black;float: left;margin-left:30px;margin-top: 41px; ">中级</a>
+			<a href="#" style="display:block;width:50px;height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:black;float: left;margin-left:30px;margin-top: 41px; ">高级</a>			
+			<p style="width:48px;height:13px;font-size:12px;font-family:Microsoft YaHei;font-weight:400;color:rgba(165,165,165,1);display: block;margin-right:31px;float: right;margin-top: 31px;">查看全部</p>
+		</div>
+		<div style="float: left;width: 1200px; margin-left: 80px;">
+			<div class="img"><img src="图层 142.png" style=" width: 228px;height: 115px;  "><p>微软人工智能-数据分析平台</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 144.png" style=" width: 228px;height: 115px; "><p>Unity Profiler入门</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 143.png" style="width: 228px;height: 115px;"><p>Cocos2d-x  引擎源码中的纹理优化</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 146.png" style="width: 228px;height: 115px;"><p>Kami2首页界面切换效果</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+			<div class="img"><img src="图层 145.png" style="width: 228px;height: 115px;  "><p>Android Hybrid APP开发实战H5+原生</p><p class="span"><span style="color: #FF7C2D">高级</span> · 1125人参与学习</p></div>
+		</div>
+		<div style="float: left;width: 1200px;height: 77px;background-position: center center;">
+			<p style="width:100px;height:19px;font-size:20px;font-family:Microsoft YaHei;font-weight:400;color:rgba(73,73,73,1);display:block; color:black;margin-left: 100px;float: left;margin-top: 37px;">牛人推荐</p>
+		</div>
+		<div id="bo" style="float: left;width: 1200px; margin-left: 80px;background-position: center;">
+			<div style="margin-left: 15px; float: left;"><img id="max" src="图层 149.png" style=" width: 461px;height: 320px;"><img id="min" src="7LGR@VK_[6W]HF17N6$]_09.jpg" style=" width: 461px;height: 320px;display: none" ></div>
+			<div class="img"><img src="20172124182104355.png" style="width: 220px;height: 320px;"></div>
+			<div class="img"><img src="20154025104058710.png" style="width: 220px;height: 320px;"></div>
+			<div class="img"><img src="20154325104317144 (1).png" style="width: 220px;height: 320px;"></div>
+			<div class="laoshi" style="position: absolute;left: 573px;top: 1866px;"><p style="width:120px;height:18px;font-size:18px;font-family:Microsoft YaHei;font-weight:bold;color:rgba(255,255,255,1);line-height:20px;display: block;margin-left: 28px;margin-top: 21px;">闻老师<span style="font-size: 14px;">&nbsp&nbsp&nbsp大数据</span></p><p style="width:174px;height:53px;font-size:12px;font-family:Microsoft YaHei;font-weight:400;color:rgba(255,255,255,1);line-height:20px;display: block;margin-left: 28px;margin-top: 12px;">高级互联网软件工程师，曾担任某物流公司CRM开发团队TL。多次JAVAEE、大数据领域研发......</p></div>
+			<div class="laoshi" style="position: absolute;left: 815px;top: 1866px;"><p style="width:120px;height:18px;font-size:18px;font-family:Microsoft YaHei;font-weight:bold;color:rgba(255,255,255,1);line-height:20px;display: block;margin-left: 28px;margin-top: 21px;">汪老师<span style="font-size: 14px;">&nbsp&nbsp&nbsp前端</span></p><p style="width:174px;height:53px;font-size:12px;font-family:Microsoft YaHei;font-weight:400;color:rgba(255,255,255,1);line-height:20px;display: block;margin-left: 28px;margin-top: 12px;">高级软件架构师，全栈开发，多年大型项目管理经验。对Web Components、Node.js......</p></div>
+			<div class="laoshi" style="position: absolute;left: 1057px;top: 1866px;"><p style="width:120px;height:18px;font-size:18px;font-family:Microsoft YaHei;font-weight:bold;color:rgba(255,255,255,1);line-height:20px;display: block;margin-left: 28px;margin-top: 21px;">江老师<span style="font-size: 14px;">&nbsp&nbsp&nbsp前端</span></p><p style="width:174px;height:53px;font-size:12px;font-family:Microsoft YaHei;font-weight:400;color:rgba(255,255,255,1);line-height:20px;display: block;margin-left: 28px;margin-top: 12px;">多年软件开发经验和教学经验，精通html,css,js,asp.net等编程语言和数据库系统......</p></div>
+		</div>
+		<div style="height:417px;background:rgba(255,255,255,1);float: left;margin-top: 73px;">
+			<div style="float: left;">
+				<div style="margin-left: 180px;height:36px;font-size:36px;font-family:Microsoft YaHei;font-weight:bold;color:rgba(0,164,255,1);line-height:21px;margin-top: 124px;width: 372px;">雪梨在线</div>
+				<div style="width:382px;height:12px;font-size:12px;font-family:SimSun;font-weight:400;color:rgba(102,102,102,1);line-height:18px;margin-top: 35px;margin-left: 182px;">致力于普及中国最好的教育,与中国一流大学和机构合作提供在线课程。</div>
+				<div style="height:36px;border: 1px solid rgba(0,164,255,1);margin-left: 181px;margin-top: 33px;width: 120px;"><div style="width:63px;height:15px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:rgba(0,164,255,1);line-height:18px;margin-top: 11px;margin-left: 27px;">下载APP</div></div>
+			</div>
+			<div style="margin-left: 103px;margin-top: 129px;position: absolute;left: 600px;">
+				<ul style="float: left;">
+					<li style="height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:rgba(51,51,51,1);line-height:21px;">关于雪梨网</li>
+					<li style="margin-top: 15px;">关于</li>
+					<li>管理团队</li>
+					<li>工作机会</li>
+					<li>客户服务</li>
+					<li>帮助</li>
+				</ul>
+				<ul style="float: left;">
+					<li style="height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:rgba(51,51,51,1);line-height:21px;margin-left: 146px;">新手指南</li>
+					<li style="margin-left: 146px;margin-top: 15px;">如何注册</li>
+					<li style="margin-left: 146px;">如何选课</li>
+					<li style="margin-left: 146px;">如何拿到毕业证</li>
+					<li style="margin-left: 146px;">学分是什么</li>
+					<li style="margin-left: 146px;">考试未通过怎么办</li>
+				</ul>
+				<ul style="float: left;">
+					<li style="height:17px;font-size:16px;font-family:Microsoft YaHei;font-weight:400;color:rgba(51,51,51,1);line-height:21px;margin-left: 152px;">合作伙伴</li>
+					<li style="margin-left: 152px;margin-top: 15px;">合作机构</li>
+					<li style="margin-left: 152px;">合作导师</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var inp = document.getElementById('sea');
+		var col = document.getElementsByClassName('col');
+		var max = document.getElementById('max');
+		var min = document.getElementById('min');
+		sea.onfocus = function(){
+			box.innerHTML = "例如：python";
+		}
+		sea.onblur = function(){
+			box.innerHTML = '';
+		}
+		function color(){
+            var r = Math.round(Math.random() * 255);
+            var g = Math.round(Math.random() * 255);
+            var b = Math.round(Math.random() * 255);
+            var a = Math.random() * 0.7+0.3;
+            var rgba = "rgba(" + r + "," + g + "," + b + "," + a + ")";
+            return rgba;
+         }
+        setInterval(function(){
+         	for(var i = 0 ; i<col.length;i++){
+         		var co = color();
+         		col[i].style.color = co;
+         	}
+        },1000)
+        var i = 0;
+         setInterval(function(){
+         	if (i%2==0){
+         		max.style.display = 'block';
+         		min.style.display = 'none';
+         	}else{
+         		max.style.display = 'none';
+         		min.style.display = 'block';
+         	}
+         	i++;
+         },1000);
+	</script>
+</html>
